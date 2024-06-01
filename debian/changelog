@@ -1,5 +1,54 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-sevlyar-go-daemon (0.1.5-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on golang-any.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Wed, 14 Dec 2022 05:25:26 +0000
+
+golang-github-sevlyar-go-daemon (0.1.5-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+  [ William 'jawn-smith' Wilson ]
+  * Cherry pick upstream patch to remove darwin/386 architecture and resolve FTBFS with Go 1.17. (Closes: 994425)
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Thu, 16 Sep 2021 12:25:15 +1200
+
+golang-github-sevlyar-go-daemon (0.1.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.1.5
+    Fix compile on riscv64 (Closes: #951042)
+  * Bump debhelper-compat to 12
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Requires-Root
+  * Drop {Build-,}Depends on golang-github-kardianos-osext-dev.
+    Only need in go < 1.8
+  * Drop unused Files-Excluded in debian/copyright
+  * Add golang-golang-x-sys-dev to {Build-,}Depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 10 Feb 2020 19:30:40 +0800
+
+golang-github-sevlyar-go-daemon (0.1.4-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.1.4
+  * Use version 4 for d/watch
+  * Update d/copyright
+  * Update maintainer e-mail address
+  * Update Standards-Version to 4.2.1, no changes needed
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 30 Aug 2018 09:33:41 +0200
+
+golang-github-sevlyar-go-daemon (0.1.3+git20180305.32749a7-1) unstable; urgency=medium
+
+  * Initial release (Closes: #893782)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 22 Mar 2018 11:19:28 +0100
